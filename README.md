@@ -17,22 +17,28 @@ If you like this project, don't forget to leave a star. ⭐
 
 >**Note:** This built image comes with no warranty of any kind. By using this image you agree this License Aggrement in addition with Honeygain's T&C.
 
-This is a simple Docker image for installing Honeygain's Lucky Pot auto-claim script as a container.
+This is a simple Docker image for running Honeygain's lucky pot auto-claim bot.
 
 </div>
 
-## Pulling Image 🐋
+## Pulling Image 🐳
 **64-Bit Platform:** `linux/amd64` `linux/arm64`
 ```sh
+# Bun runtime
 docker pull ghcr.io/xterna/honeygain-pot
 ```
+```sh
+# Node.js runtime
+docker pull ghcr.io/xterna/honeygain-pot:node
+```
+
 **32-Bit Platform:** `linux/arm/v7`
 ```sh
 docker pull ghcr.io/xterna/honeygain-pot:arm32v7
 ```
 
 ## Overview 🐝
-[**Honeygain-Pot**](https://bit.ly/3x6nX1S) 🍯 is a script (bot) powered by NodeJS, JavaScript and Shell scripting to automatically claim your lucky pot bonus daily from [**Honeygain**](https://bit.ly/3x6nX1S)🐝.
+[**Honeygain-Pot**](https://bit.ly/3x6nX1S) 🍯 is a script (bot) powered by `Bun`/`Node.js`, `JavaScript` and Shell scripting to automatically claim your lucky pot bonus daily from [**Honeygain**](https://bit.ly/3x6nX1S)🐝.
 
 The script is designed to be run in a docker environment, allowing it to be deployed alongside the Honeygain docker container.
 
@@ -42,7 +48,7 @@ CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O  
 33d34f74cd0e   honeygain-pot   0.20%     3.02MiB / 320MiB    0.94%     3.3MB / 206kB   0B / 43.6MB   3
 ```
 
-> [**Income Generator**](https://github.com/XternA/income-generator) comes pre-configured with this image. A tool which consolidates and earns passive income from multiple sources.
+> [**Income Generator**](https://github.com/XternA/income-generator) (IGM) comes pre-configured with this image and auto-update. A tool which consolidates and earns passive income from multiple sources. IGM utilises the faster runtime version.
 
 ## Features 🚀
 - Automatically log in and claim daily lucky pot.
@@ -63,14 +69,14 @@ Logged into Honeygain 🐝
 
 Earning with Honeygain wallet 💰
 Claimed 100 credits ✅
-Won today 100 credits 🪙
+Won today 100 credits 🤑
 Earned today 157.43 credits 🍯
 Waiting for next available pot to claim 🍯
-Time remaining: 23 hours 26 minutes 42 seconds ⏱️
-.
-.
-.
-Time remaining: 0 hours 0 minutes 0 seconds ⏱️
+Ready to claim in 7 hours 40 minutes ⏱️
+
+Current logged time: 16:19:26
+Next event trigger:  00:00:00
+
 Ready to claim again ✅
 ```
 
@@ -90,7 +96,7 @@ EMAIL=<email_address>
 PASSWORD=<password_credential>
 ```
 
-## Docker Deployment 🐋
+## Docker Deployment 🐳
 ### Compose
 File: `compose.yml`
 ```yaml
