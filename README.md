@@ -24,12 +24,7 @@ This is a simple Docker image for running Honeygain's lucky pot auto-claim bot.
 ## Pulling Image 🐳
 **64-Bit Platform:** `linux/amd64` `linux/arm64`
 ```sh
-# Bun runtime
 docker pull ghcr.io/xterna/honeygain-pot
-```
-```sh
-# Node.js runtime
-docker pull ghcr.io/xterna/honeygain-pot:node
 ```
 
 **32-Bit Platform:** `linux/arm/v7`
@@ -38,20 +33,21 @@ docker pull ghcr.io/xterna/honeygain-pot:arm32v7
 ```
 
 ## Overview 🐝
-[**Honeygain-Pot**](https://bit.ly/3x6nX1S) 🍯 is a script (bot) powered by `Bun`/`Node.js`, `JavaScript` and Shell scripting to automatically claim your lucky pot bonus daily from [**Honeygain**](https://bit.ly/3x6nX1S)🐝.
+[**Honeygain-Pot**](https://bit.ly/3x6nX1S) 🍯 is a very lightweight bot powered by Bun JavaScript runtime to automatically claim your lucky pot bonus daily from [**Honeygain**](https://bit.ly/3x6nX1S)🐝.
 
-The script is designed to be run in a docker environment, allowing it to be deployed alongside the Honeygain docker container.
+The bot is designed to be run in a docker environment, allowing it to be deployed alongside the Honeygain docker container.
 
-It uses very minimal resources, resulting in the CPU utilisation staying at idle **0%** the entire time unless logging into the website.
+It uses very minimal resources, resulting in the CPU utilisation staying at idle **0%** the entire time.
 ```
 CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O         BLOCK I/O     PIDS
 33d34f74cd0e   honeygain-pot   0.20%     3.02MiB / 320MiB    0.94%     3.3MB / 206kB   0B / 43.6MB   3
 ```
 
-> [**Income Generator**](https://github.com/XternA/income-generator) (IGM) comes pre-configured with this image and auto-update. A tool which consolidates and earns passive income from multiple sources. IGM utilises the faster runtime version.
+> [**Income Generator**](https://github.com/XternA/income-generator) (IGM) comes pre-configured with this image and includes automatic updates. It orchestrates multiple passive income sources with proxy support to maximise earnings and is highly recommended for use.
 
 ## Features 🚀
 - Automatically log in and claim daily lucky pot.
+- Caching to avoid unnecessary logins for faster execution.
 - Find out the remaining time before the next claim.
 - Set up the timer and auto-wait for the duration.
 - On ready to reclaim, repeat the cycle.
@@ -62,15 +58,19 @@ CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O  
 This is what the script looks like when you inspect the output.
 ```
 ------------ Honeygain Pot Auto Claim ------------
-Starting login process...
-Logging in as example@abc.com
+Logging in as bee@honeypot.com
 Logged into Honeygain 🐝
 --------------------------------------------------
 
-Earning with Honeygain wallet 💰
+Active Devices: 5 💻
+
+Earning with JumpTask wallet 💰
 Claimed 100 credits ✅
-Won today 100 credits 🤑
+Won today 10 credits 🤑
+Gathered 2.53 GB today 💻
 Earned today 157.43 credits 🍯
+JumpTask bonus 7.58 🍯
+
 Waiting for next available pot to claim 🍯
 Ready to claim in 7 hours 40 minutes ⏱️
 
@@ -79,8 +79,6 @@ Next event trigger:  00:00:00
 
 Ready to claim again ✅
 ```
-
-![image](https://github.com/user-attachments/assets/5dead907-cbb6-42b2-a7cc-31928077159e)
 
 ## Usage 📃
 Define the following environment variable to bootstrap the image.
@@ -143,13 +141,6 @@ Execute where compose file is located.
 ```yaml
 docker compose up -d
 ```
-
-ℹ️ **Note:** If you apply resource limits such as CPU and RAM you need to set the following bare minimum:
-```
-  - cpu=0.8
-  - mem_limit=350m
-```
-The script won't be able to run properly and will constantly timeout if the CPU and RAM limit is set lower than recommended. This is only required during the boot-up phase where it needs to spin up a headless browser to connect to the site. Resource is most intensive only during this phase.
 
 ### CLI
 Using environment variable or Dotenv `.env` defined e.g.
