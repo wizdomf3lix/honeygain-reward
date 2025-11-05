@@ -13,7 +13,7 @@ Honeygain Pot 🐝🍯
 
 If you like this project, don't forget to leave a star. ⭐
 
-### Containerized Docker image for [Honeygain](https://bit.ly/3x6nX1S) lucky pot 🍯
+### Ultra-lightweight, blazingly fast containerized Docker image for [Honeygain](https://bit.ly/3x6nX1S) lucky pot 🍯🐝
 
 >**Note:** This built image comes with no warranty of any kind. By using this image you agree this License Aggrement in addition with Honeygain's T&C.
 
