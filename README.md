@@ -37,13 +37,22 @@ docker pull ghcr.io/xterna/honeygain-pot:arm32v7
 
 The bot is designed to be run in a docker environment, allowing it to be deployed alongside the Honeygain docker container.
 
-It uses very minimal resources, resulting in the CPU utilisation staying at idle **0%** the entire time.
+Very minimal resources, resulting in CPU utilisation staying at idle **0%** the entire time.
 ```
-CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O         BLOCK I/O     PIDS
-33d34f74cd0e   honeygain-pot   0.20%     3.02MiB / 320MiB    0.94%     3.3MB / 206kB   0B / 43.6MB   3
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O         BLOCK I/O
+33d34f74cd0e   honeygain-pot   0.00%     592KiB / 320MiB     0.17%     3.3MB / 206kB   0B / 43.6MB
 ```
 
-> [**Income Generator**](https://github.com/XternA/income-generator) (IGM) comes pre-configured with this image and includes automatic updates. It orchestrates multiple passive income sources with proxy support to maximise earnings and is highly recommended for use.
+### Image Variants 📦
+| Variant                   | Image Size | Platforms               |
+|:--------------------------|:-----------|:------------------------|
+| Honeygain Pot (IGM)       | 3.98MB     | amd64, arm64, armv7     |
+| Honeygain Pot (Standard)  | 153MB      | amd64, arm64            |
+| Honeygain Pot (arm32v7)   | 209MB      | armv7                   |  
+
+The super-lightweight optimised version is licensed exclusively for use with Income Generator (IGM).
+
+[**Income Generator**](https://github.com/XternA/income-generator) (IGM) comes pre-configured with a significantly faster, super-lightweight version, including automatic updates. It orchestrates multiple passive income sources with proxy support to maximise earnings and is highly recommended for use.
 
 ## Features 🚀
 - Automatically log in and claim daily lucky pot.
