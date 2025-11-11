@@ -39,8 +39,8 @@ The bot is designed to be run in a docker environment, allowing it to be deploye
 
 Very minimal resources, resulting in CPU utilisation staying at idle **0%** the entire time.
 ```
-CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O         BLOCK I/O
-33d34f74cd0e   honeygain-pot   0.00%     592KiB / 320MiB     0.17%     3.3MB / 206kB   0B / 43.6MB
+NAME            CPU %     MEM USAGE / LIMIT   MEM %     NET I/O         BLOCK I/O
+honeygain-pot   0.00%     592KiB / 320MiB     0.17%     3.3MB / 206kB   0B / 43.6MB
 ```
 
 ### Image Variants 📦
