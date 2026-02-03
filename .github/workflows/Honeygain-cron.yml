@@ -1,0 +1,69 @@
+name: Honeygain pot scheduled run
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours at minute 0
+  workflow_dispatch:
+
+jobs:
+  run-honeygain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Pull honeygain-pot image
+        run: docker pull ghcr.io/xterna/honeygain-pot:latest
+
+      - name: Run container
+        id: run
+        run: |
+          # create a directory for logs
+          mkdir -p ./ci-logs
+          # run container detached and capture container id
+          CONTAINER_ID=$(docker run -d \
+            -e EMAIL="${{ secrets.HONEY_EMAIL }}" \
+            -e PASSWORD="${{ secrets.HONEY_PASSWORD }}" \
+            --name honeygain-ci \
+            ghcr.io/xterna/honeygain-pot:latest)
+          echo "container_id=$CONTAINER_ID" >> $GITHUB_OUTPUT
+          # wait a short time for the service to initialize
+          sleep 10
+
+      - name: Wait and perform health check
+        run: |
+          # attempt to fetch a health endpoint or check logs for success message
+          # adjust grep pattern to match the repo's success log line
+          for i in {1..30}; do
+            docker logs honeygain-ci --tail 200 | tee ./ci-logs/run.log
+            if docker logs honeygain-ci --tail 200 | grep -i "claimed\|success\|pot"; then
+              echo "Found success marker in logs"
+              break
+            fi
+            echo "Not ready yet, sleeping 10s"
+            sleep 10
+          done
+
+      - name: Keep container running until job end
+        run: |
+          # Let the container run until the job times out or completes.
+          # This loop keeps the step alive and periodically appends logs.
+          for i in {1..360}; do
+            docker logs honeygain-ci --tail 200 >> ./ci-logs/run.log || true
+            sleep 60
+          done
+        continue-on-error: true
+
+      - name: Stop and remove container
+        if: always()
+        run: |
+          docker stop honeygain-ci || true
+          docker rm honeygain-ci || true
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: honeygain-logs-${{ github.run_id }}
+          path: ./ci-logs/run.log
